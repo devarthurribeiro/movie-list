@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    padding: 64px;
+}
+
+.movie-filme {
+    background-color: #dedede;
+    padding: 18px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}

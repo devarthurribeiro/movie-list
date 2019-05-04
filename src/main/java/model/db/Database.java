@@ -10,7 +10,7 @@ public class Database {
 
     protected Connection connection;
 
-    private String url = "jdbc:postgres://mrtnjxkztdadrl:69777b9e8824478e63f7a0c5acced830ec9a9a3edfba1dfbf6bad9cf9e99ea98@ec2-50-19-127-115.compute-1.amazonaws.com:5432/ddr7hg9bprhk6i?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+    private String url = "jdbc:postgresql://ec2-50-19-127-115.compute-1.amazonaws.com:5432/d6ge2oak9ojm48?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
     private String user = "mrtnjxkztdadrl";
     private String password = "69777b9e8824478e63f7a0c5acced830ec9a9a3edfba1dfbf6bad9cf9e99ea98";
     

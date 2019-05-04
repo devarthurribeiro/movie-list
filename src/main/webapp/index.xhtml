@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+        <title>Projeto Locadora</title>
+    </h:head>
+    <h:body>
+        <ui:include src="menu.xhtml"/>
+        <div class="container">
+            <center>
+                <p:dataTable id="movieTable" value="#{movieCtrl.movie.all()}" var="movie" border="1" rendered="true">
+
+                <f:facet name="header">LISTA DE FILMES</f:facet>
+
+                <p:column>
+                    <f:facet name ="header">ID</f:facet>
+                        #{movie.id}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">TITULO</f:facet >
+                        #{movie.titulo}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">DATA DE LANÇAMENTO</f:facet >
+                        #{movie.data}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">NOTA</f:facet >
+                        #{movie.nota}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">DESCRIÇÃO</f:facet >
+                        #{movie.descricao}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">QUANTIDADE</f:facet >
+                        #{movie.estoque}
+                </p:column>
+
+                <p:column>
+                    <f:facet name ="header">ADICIONAR A CESTA</f:facet >
+                    <h:form>
+                        <p:commandButton value="Adicionar" action="#{cartCtrl.add(movie)}" disabled="#{filme.estoque==0}" ajax="true" update="movieTable" /> 
+                    </h:form>
+                </p:column>
+            </p:dataTable>
+        </center>
+        </div>
+    </h:body>
+</html>
+
